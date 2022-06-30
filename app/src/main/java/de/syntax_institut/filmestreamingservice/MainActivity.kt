@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         // TODO Schreibe hier deinen Code
         recyclerView.adapter = ItemAdapter(this, MovieTitle)
 
+        // Like Button
+
+
         // verbesserte Performance bei fixer Größe
         recyclerView.setHasFixedSize(true)
     }

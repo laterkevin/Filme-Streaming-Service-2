@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import de.syntax_institut.filmestreamingservice.R
@@ -23,6 +24,7 @@ class ItemAdapter(
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // TODO Schreibe hier deinen Code
         val filmStreifen: TextView = itemView.findViewById(R.id.FilmBalken)
+        val heartMovie: ImageButton = itemView.findViewById(R.id.heartMovie)
     }
 
     /**
@@ -55,6 +57,11 @@ class ItemAdapter(
 
         // Setze den Text
         // TODO Schreibe hier deinen Code
+        holder.heartMovie.drawable
+
+        holder.heartMovie.setOnClickListener() {
+
+        }
     }
 
     /**
