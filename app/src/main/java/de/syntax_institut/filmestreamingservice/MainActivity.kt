@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import de.syntax_institut.filmestreamingservice.adapter.ItemAdapter
 import de.syntax_institut.filmestreamingservice.data.Datasource
+import de.syntax_institut.filmestreamingservice.data.model.MovieTitle
 import de.syntax_institut.filmestreamingservice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,9 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         // Liste aus Filmtiteln wird von der Datasource geladen
         // TODO Schreibe hier deinen Code
+        val MovieTitle = Datasource(this).loadTitles()
 
         // ItemAdapter wird als Adapter festgelegt
         // TODO Schreibe hier deinen Code
+        recyclerView.adapter = ItemAdapter(this, MovieTitle)
 
         // verbesserte Performance bei fixer Größe
         recyclerView.setHasFixedSize(true)

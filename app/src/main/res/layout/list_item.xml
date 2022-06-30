@@ -8,4 +8,19 @@
     android:alpha="0.9"
     android:background="?attr/colorPrimaryVariant">
 
+    <TextView
+        android:id="@+id/FilmBalken"
+        android:layout_width="420dp"
+        android:layout_height="50dp"
+        android:text="Placeholder"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

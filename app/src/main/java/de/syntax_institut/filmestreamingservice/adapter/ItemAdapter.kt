@@ -22,6 +22,7 @@ class ItemAdapter(
      */
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // TODO Schreibe hier deinen Code
+        val filmStreifen: TextView = itemView.findViewById(R.id.FilmBalken)
     }
 
     /**
@@ -31,9 +32,12 @@ class ItemAdapter(
 
         // das itemLayout wird zur ItemView aufgeblasen
         // TODO Schreibe hier deinen Code
+        val adapterLayout = LayoutInflater.from(parent.context)
+        .inflate(R.layout.list_item, parent, false)
 
         // und in einem ViewHolder zurückgegeben
-        return TODO("Liefere das Ergebnis zurück")
+
+        return ItemViewHolder(adapterLayout)
     }
 
     /**
@@ -43,9 +47,11 @@ class ItemAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         // Hole das movieTitle Objekt für die enthaltenen Informationen
         // TODO Schreibe hier deinen Code
+        val item = dataset[position]
 
         // Hole die TextView aus dem ViewHolder
         // TODO Schreibe hier deinen Code
+        holder.filmStreifen.text = context.resources.getString(item.stringResource)
 
         // Setze den Text
         // TODO Schreibe hier deinen Code
@@ -55,6 +61,7 @@ class ItemAdapter(
      * damit der LayoutManager weiß, wie lang die Liste ist
      */
     override fun getItemCount(): Int {
-        return TODO()
+
+        return dataset.size
     }
 }
